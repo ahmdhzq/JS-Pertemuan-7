@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tugas Mandiri 7</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .container {
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+            box-shadow: 0 0 2px 0 #757575;
+            padding: 30px 50px 30px;
+            border-radius: 20px;
+        }
+        h3 {
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            font-size: 20px;
+        }
+        p {
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        }
+        button {
+            background-color: #48ccc1;
+            border: none;
+            padding: 5px;
+            border-radius: 5px;
+            box-shadow: 0 0 2px 0 #609b96;
+        }
+        button:hover {
+            background-color: #40b4ab;
+            cursor: pointer;
+            transition: .3s;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h3 id="hasil"></h3>
+        <p>Menambahkan "Gagak" kedalam array hewan</p>
+        <button onclick="tambah()">Tambah</button>
+        <p>Mengubah indeks-2 menjadi "Kucing"</p>
+        <button onclick="ganti()">Ubah</button>
+        <p>Menghapus indeks-0</p>
+        <button onclick="hapus()">Hapus</button>
+        <br>
+        <br>
+        <p>copyright &copy; Ahmad Haziq</p>
+        </div>
+</body>
+<script>
+    let hewan = [
+        "Gajah",
+        "Ikan",
+        "Harimau",
+    ]
+
+    const tambah = () => {
+        hewan.push('Gagak')
+        document.getElementById('hasil').innerHTML = hewan
+    }
+    
+    const ganti = () => {
+        hewan[2]= 'Kucing'
+        document.getElementById('hasil').innerHTML = hewan
+    }
+    
+    const hapus = () => {
+        hewan.shift([0])
+        document.getElementById('hasil').innerHTML = hewan
+    }
+
+    document.getElementById('hasil').innerHTML = hewan
+</script>
+</html>
